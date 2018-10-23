@@ -43,6 +43,6 @@ CREATE TABLE REALIZA_ACTIVIDAD (
 		FOREIGN KEY(codig_activ) REFERENCES ACTIVIDAD(codigo_activ),
     nombre_aloja VARCHAR(255),
 		FOREIGN KEY(nombre_aloja) REFERENCES ALOJAMIENTO(nombre_aloja),
-    dia_semana DATE DEFAULT NULL,
+    dia_semana VARCHAR(255) DEFAULT NULL,
 	PRIMARY KEY (nombre_aloja, codig_activ)
 );
