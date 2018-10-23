@@ -4,47 +4,45 @@ CREATE DATABASE Alojamiento_Rurales_B;
 
 USE Alojamiento_Rurales_B;
 
-CREATE TABLE actividad (
-    codigo_activ INT AUTO_INCREMENT PRIMARY KEY,
-    nombre_activ VARCHAR(255),
-    descripcion VARCHAR(255),
-    nivel DECIMAL(2 , 0 )
+CREATE TABLE ACTIVIDAD (
+    codigo_activ INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nombre_activ VARCHAR(255) NOT NULL,
+    descripcion VARCHAR(255) NOT NULL,
+    nivel INT NOT NULL
 );
 
-CREATE TABLE alojamiento (
+CREATE TABLE ALOJAMIENTO (
     nombre_aloja VARCHAR(255) NOT NULL PRIMARY KEY,
-    direccion VARCHAR(255),
-    telefono INT,
-    contacto VARCHAR(255),
-    numero_habitantes NUMERIC
+    direccion VARCHAR(255) NOT NULL,
+    telefono INT NOT NULL,
+    contacto VARCHAR(255) NOT NULL,
+    numero_habitantes NUMERIC NOT NULL
 );
 
-CREATE TABLE personal (
+CREATE TABLE PERSONAL (
     codigo_p INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    nombre_p VARCHAR(255),
-    direccion VARCHAR(255),
-    RUC INT,
-    nombre_aloja_p VARCHAR(255),
-    FOREIGN KEY (nombre_aloja_p)
-        REFERENCES alojamiento (nombre_aloja)
+	nombre_aloja_p VARCHAR(255), 
+		FOREIGN KEY(nombre_aloja_p) REFERENCES ALOJAMIENTO(nombre_aloja),
+    nombre_p VARCHAR(255) NOT NULL,
+    direccion VARCHAR(255) NOT NULL,
+    RUC INT NOT NULL
 );
 
-CREATE TABLE habitacion (
-    nombre_aloja_hab VARCHAR(255),
-    FOREIGN KEY (nombre_aloja_hab)
-        REFERENCES alojamiento (nombre_aloja),
-    n_habita VARCHAR(255),
-    tipo VARCHAR(255),
+CREATE TABLE HABITACION (
+    nombre_aloja VARCHAR(255) NOT NULL,
+		FOREIGN KEY(nombre_aloja) REFERENCES ALOJAMIENTO(nombre_aloja),
+    n_habita VARCHAR(255) NOT NULL,
+    tipo VARCHAR(255) NOT NULL,
     banho INT DEFAULT NULL,
-    precio DOUBLE DEFAULT NULL
+    precio DOUBLE DEFAULT NULL,
+	PRIMARY KEY(nombre_aloja, n_habita)
 );
 
-CREATE TABLE realiza_actividad (
-    nombre_aloja_realiza_act VARCHAR(255),
-    FOREIGN KEY (nombre_aloja_realiza_act)
-        REFERENCES alojamiento (nombre_aloja),
-    codigo_activ_realiza_activ INT,
-    FOREIGN KEY (codigo_activ_realiza_activ)
-        REFERENCES actividad (codigo_activ),
-    dia_semana DATE DEFAULT NULL
+CREATE TABLE REALIZA_ACTIVIDAD (
+	codig_activ INT,
+		FOREIGN KEY(codig_activ) REFERENCES ACTIVIDAD(codigo_activ),
+    nombre_aloja VARCHAR(255),
+		FOREIGN KEY(nombre_aloja) REFERENCES ALOJAMIENTO(nombre_aloja),
+    dia_semana DATE DEFAULT NULL,
+	PRIMARY KEY (nombre_aloja, codig_activ)
 );
