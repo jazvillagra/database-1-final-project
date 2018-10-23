@@ -1,15 +1,14 @@
-#Trabajo Práctico
+# Trabajo Práctico
 
-##Caso: Alojamientos Rurakes
-###Fecha Tope de Entrega: 3 de noviembre
+## Caso: Alojamientos Rurakes
+### Fecha Tope de Entrega: 3 de noviembre
 
-###Observación:
+### Observación:
 Un archivo conteniendo: nombres de los integrantes del grupo, el enunciado, las estructuras de las tablas, las tablas con los datos de prueba. Las instrucciones LDD y LMD en Transact-SQL
 
-###Valor del trabajo: 10 puntos
+### Valor del trabajo: 10 puntos
 
-
-##Enunciado
+## Enunciado
 La Comunidad de Atyra desea guardar información sobre los alojamientos rurales que existen en dicha comunidad. Para ello ha decidido crear una BD que recoja las siguientes consideraciones:
 * Un alojamiento rural se identifica por un nombre, una dirección, teléfono, persona de contacto que pertenece al personal del alojamiento.
 * En  cada  alojamiento  trabajan  una  serie  de  personas que  se  identifican  por  un  código  de  personal.  Se  requiere conocer el nombre, la dirección y el RUC. Aunque en un alojamiento trabajen varias personas, una persona solo puede trabajar en un alojamiento. 
@@ -19,14 +18,14 @@ La Comunidad de Atyra desea guardar información sobre los alojamientos rurales 
 
 El analista de sistemas después de recoger y analizar los datos,  ha diseñado el siguiente esquema relacional. 
 
-**ALOJAMIENTO** (nombre_aloja, direccion, telefono, contacto, numero_habitantes)
+**ALOJAMIENTO** (_nombre_aloja_, direccion, telefono, contacto, numero_habitantes)
 
-**PERSONAL** (codigo_p, nombre_p, direccion, RUC, nombre_aloja)
+**PERSONAL** (_codigo_p_, nombre_p, direccion, RUC, **_nombre_aloja_**)
 
-**HABITACION** (nombre_aloja, n_habita, tipo, banho\*, precio\*)
+**HABITACION** (**_nombre_aloja_**, n_habita, tipo, banho*, precio*)
 
-**REALIZA_ACTIVIDAD** (nombre_aloja, codigo_activ, dia_semana\*)
+**REALIZA_ACTIVIDAD** (**_nombre_aloja_**, **_codigo_activ_**, dia_semana*)
 
-**ACTIVIDAD** (codigo_activ, nombre_activ, descripcion, nivel)
+**ACTIVIDAD** (**_codigo_activ_**, nombre_activ, descripcion, nivel)
 
-***Obs.:*** Los campos que estan subrayados son clave principal de la tabla y los que están en negrita y cursiva son claves ajenas. Los campos seguidos de un \* indican que aceptan valores nulos.
+***Obs.:*** Los campos que estan subrayados son clave principal de la tabla y los que están en negrita y cursiva son claves ajenas. Los campos seguidos de un * indican que aceptan valores nulos.
