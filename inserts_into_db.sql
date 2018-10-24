@@ -48,7 +48,7 @@ VALUES(default, "Skydiving", "Paracaidismo solitario", 10);
 
 #INSERTS TO HABITACION
 INSERT INTO Alojamiento_Rurales_B.HABITACION(nombre_aloja, n_habita, tipo, banho, precio)
-VALUES("Jasy", 4, "Granja", 2, 80000);
+VALUES("Jasy", 4, "Doble", 2, 80000);
 INSERT INTO Alojamiento_Rurales_B.HABITACION(nombre_aloja, n_habita, tipo, banho, precio)
 VALUES("Ña Eustaquia", 1, "Restaurante", 1, 25000);
 INSERT INTO Alojamiento_Rurales_B.HABITACION(nombre_aloja, n_habita, tipo, banho, precio)
@@ -75,4 +75,4 @@ VALUES(2, "Casa 3", "Jueves");
 INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
 VALUES(4, "Jasy", "Sabado");
 INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
-VALUES(3, "La Huerta", "Domingo");
+VALUES(3, "Casa 4", "Domingo");
