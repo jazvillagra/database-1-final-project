@@ -58,21 +58,21 @@ VALUES("Casa 4", 3, "Departamento", NULL, 60000);
 
 
 #INSERTS TO REALIZA_ACTIVIDAD
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(1,'La Huerta','Lunes');
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(2,'Jasy','Lunes');
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(3,'La Huerta','Martes');
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(4,'La Huerta','Viernes');
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(1,'Ña Eustaquia',NULL);
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(5,'Ña Eustaquia','Miercoles');
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(2,'Casa 3','Jueves');
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(4,'Jasy','Sabado');
-INSERT INTO `alojamiento_rurales_b`.`realiza_actividad`(`codig_activ`,`nombre_aloja`,`dia_semana`)
-VALUES(3,'La Huerta','Domingo');
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(1,"La Huerta", "Lunes");
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(2, "Jasy", "Lunes");
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(3, "La Huerta", "Martes");
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(4, "La Huerta", "Viernes");
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(1, "Ña Eustaquia", NULL);
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(5, "Ña Eustaquia", "Miercoles");
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(2, "Casa 3", "Jueves");
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(4, "Jasy", "Sabado");
+INSERT INTO Alojamiento_Rurales_B.REALIZA_ACTIVIDAD(codig_activ, nombre_aloja, dia_semana)
+VALUES(3, "La Huerta", "Domingo");
