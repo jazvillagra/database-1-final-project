@@ -13,3 +13,11 @@ JOIN Alojamiento_Rurales_B.ACTIVIDAD act
 WHERE hab.tipo="Dobles"
 AND act.nombre_activ="senderismo"
 GROUP BY hab.nombre_aloja;
+
+#Obtener la cantidad de Personales con que cuenta el Alojamiento “Ña Eustaquia”
+SELECT count(*) FROM Alojamiento_Rurales_B.PERSONAL a 
+WHERE a.nombre_aloja_p='Ña Eustaquia';
+
+#Obtener los nombres de las personas que trabajan en el alojamiento con nombre “Jasy” que no posean RUC.
+SELECT a.nombre_p FROM Alojamiento_Rurales_B.PERSONAL a 
+WHERE a.nombre_aloja_p='Jasy' AND a.RUC=null;
