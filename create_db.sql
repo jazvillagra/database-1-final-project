@@ -1,4 +1,4 @@
-DROP DATABASE Alojamiento_Rurales_B;
+#DROP DATABASE Alojamiento_Rurales_B;
 
 CREATE DATABASE Alojamiento_Rurales_B;
 
